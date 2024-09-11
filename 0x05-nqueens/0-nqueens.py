@@ -23,8 +23,7 @@ def queens(n, row=0, columns=[], major_diagonals=[], minor_diagonals=[]):
     if row == n:
         yield columns
     for col in range(n):
-        if col not in columns and row + col not in
-        major_diagonals and row - col not in minor_diagonals:
+        if col not in columns and row + col not in major_diagonals and row - col not in minor_diagonals:
             yield from queens(n, row + 1, columns + [col], major_diagonals +
                               [row + col], minor_diagonals + [row - col])
 
